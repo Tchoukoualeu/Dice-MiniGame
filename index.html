@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dice_Game</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<div class="level">
+<p style="margin: 10px;" id="levelCaption">Beginner  </p>
+<input type="checkbox" id="level" />
+<label for="level">On/Off</label>  
+</div>
+<div class="container">
+  <div id="yourPoint">
+    <div class="column">
+      <div style="background: green;">
+        <div style="width: 150px; text-align: center; color: white; margin: 5px;">Your Points</div>
+      </div>
+      <div class="row">
+        <div class="numerotation">1.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p1"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">2.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p2"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">3.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p3"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">4.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p4"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">5.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p5"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">6.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p6"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">7.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p7"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">8.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p8"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">9.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p9"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">10.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p10"></div>
+      </div>
+      <div id="yp"></div>
+    </div>
+  </div>
+  <div>
+    <div class="row myCenter">
+      <div id="dice">
+        <div class="row">
+          <div class="dot" id="one"></div>
+          <div class="dot" id="two"></div>
+          <div class="dot" id="three"></div>
+        </div>
+        <div class="row">
+          <div class="nodot"></div>
+          <div class="nodot" id="four"></div>
+          <div class="nodot"></div>
+        </div>
+        <div class="row">
+          <div class="dot" id="five"></div>
+          <div class="dot" id="six"></div>
+          <div class="dot" id="seven"></div>
+        </div>
+      </div>
+      <div id="dice">
+        <div class="row">
+          <div class="nodot" id="eight"></div>
+          <div class="nodot" id="nine"></div>
+          <div class="dot" id="ten"></div>
+        </div>
+        <div class="row">
+          <div class="nodot"></div>
+          <div class="dot" id="eleven"></div>
+          <div class="nodot"></div>
+        </div>
+        <div class="row">
+          <div class="dot" id="twelve"></div>
+          <div class="nodot" id="thirteen"></div>
+          <div class="nodot" id="fourteen"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="display: flex; flex-direction: column;">
+      <div class="buttonHolder">
+        <button id="toggle" class="btn btn-2">PLAY</button>
+        <button id="reset" class="btn btn-2">RESET</button>
+      </div>
+      <div id="output"></div>
+    </div>
+    
+  </div>
+  <div id="myPoint">
+    <div class="column">
+      <div style="background: green;">
+        <div style="width: 150px; text-align: center; color: white; margin: 5px;">My Points</div>
+      </div>
+      <div class="row">
+        <div class="numerotation">1.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p11"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">2.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p12"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">3.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p13"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">4.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p14"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">5.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p15"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">6.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p16"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">7.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p17"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">8.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p18"></div>
+      </div>
+      <div class="row">
+        <div class="numerotation">9.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p19"></div>
+      </div>
+      <div class="row" style="background: #ccc;">
+        <div class="numerotation">10.</div>
+        <div style="text-align: center; width: 80px; margin: 5px;" id="p20"></div>
+      </div>
+      <div style="width: 150px; text-align: center; margin: 5px;" id="mp"></div>
+    </div>
+  </div>
+</div>
+<p id="score">Your Turn</p>
+<p style="text-align: center; margin-top: 30px;">Designed and coded by Tchoukoualeu</p>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

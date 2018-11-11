@@ -32,8 +32,8 @@ btn.on("click", function() {
 
   rolldice(dice1, dice2)
 
-  local = eval(dice1 + "+" + dice2);
-  output.text(dice1 + " + " + dice2 + " = " + local);
+  local = eval(`${dice1} + ${dice2}`);
+  output.text(`${dice1} + ${dice2} = ${local}`);
 
   //filling the table with the appropriate values
   lap += 1;
